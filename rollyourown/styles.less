@@ -1,0 +1,118 @@
+@import "reset.less";
+
+@b_container: 1000px;
+@b_ad: 160px;
+@b_video: @b_container - @b_ad * 2;
+@h_container: 400px;
+@link-color: white;
+@background-color: black;
+
+
+body
+{
+background-color: @background-color;
+}
+
+a
+{
+  color: @link-color;
+  text-decoration: none;
+  
+      &:hover::after
+      {
+        color: @link-color;
+        visibility: visible;
+        content: " ]";
+      }
+      
+      &:hover::before
+      {
+        color: @link-color;
+        visibility: visible;
+        content: "[ ";
+      }
+      
+      &:after
+      {
+        color: @background-color;
+        visibility: hidden;
+        content: " ]";
+      }
+      
+      &:before
+      {
+        color: @background-color;
+        visibility: hidden;
+        content: "[ ";
+      }
+
+
+}
+
+#container
+{
+  width: @b_container;
+  height: @h_container;
+  position: relative;
+  
+  
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  background-color: #6c94be;
+}
+
+#left-ad
+{
+  width: @b_ad;
+  height: @h_container;
+  position: absolute;
+  left: 0px;
+  
+  //red
+  background-color: #842210;
+}
+
+#video
+{
+  width: @b_video;
+  height: @h_container;
+  position: absolute;
+  left: @b_ad;
+  
+  //red
+  background-color: dodgerblue;
+}
+
+
+#right-ad
+{
+  width: @b_ad;
+  height: @h_container;
+  position: absolute;
+  right: 0px;
+
+  
+  background-color:#4D926F;
+}
+
+footer
+{
+width: @b_container;
+height: 35px;
+
+//background-color: dodgerblue;
+position: relative;
+top: 30px;
+
+margin-left: auto;
+margin-right: auto;
+
+text-align: center;
+
+
+}
+
+
+
